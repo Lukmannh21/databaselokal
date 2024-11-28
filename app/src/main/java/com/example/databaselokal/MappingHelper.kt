@@ -1,6 +1,8 @@
 package com.example.databaselokal
 
 import android.database.Cursor
+import com.example.databaselokal.DatabaseContract
+import com.example.databaselokal.Homework
 
 object MappingHelper {
 
@@ -9,10 +11,11 @@ object MappingHelper {
 
         homeworkCursor?.apply {
             while (moveToNext()) {
-                val id = getInt(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns._ID))
+                val id = getInt(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns.ID))
                 val title = getString(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns.TITLE))
                 val description = getString(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns.DESCRIPTION))
                 val date = getString(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns.DATE))
+
 
                 homeworkList.add(Homework(id, title, description, date))
             }

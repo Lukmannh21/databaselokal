@@ -5,11 +5,11 @@ import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sqliteapp.adapter.HomeworkAdapter
-import com.example.sqliteapp.database.HomeworkHelper
-import com.example.sqliteapp.databinding.ActivityHomeworkBinding
-import com.example.sqliteapp.helper.MappingHelper
-import com.example.sqliteapp.models.Homework
+import com.example.databaselokal.HomeworkAdapter
+import com.example.databaselokal.HomeworkHelper
+import com.example.databaselokal.MappingHelper
+import com.example.databaselokal.Homework
+import com.example.databaselokal.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -18,7 +18,7 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHomeworkBinding
+    private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: HomeworkAdapter
     private val resultLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHomeworkBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportActionBar?.title = "Homework"
