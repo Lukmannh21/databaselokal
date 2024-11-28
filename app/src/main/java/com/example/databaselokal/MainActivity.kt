@@ -2,6 +2,7 @@ package com.example.databaselokal
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sqliteapp.adapter.HomeworkAdapter
@@ -10,6 +11,10 @@ import com.example.sqliteapp.databinding.ActivityHomeworkBinding
 import com.example.sqliteapp.helper.MappingHelper
 import com.example.sqliteapp.models.Homework
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 

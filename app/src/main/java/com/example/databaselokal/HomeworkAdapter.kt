@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.databaselokal.databinding.ItemHomeworkBinding
 
 class HomeworkAdapter(private val onItemClickCallback: OnItemClickCallback) : RecyclerView.Adapter<HomeworkAdapter.HomeworkViewHolder>() {
     var listHomework = ArrayList<Homework>()

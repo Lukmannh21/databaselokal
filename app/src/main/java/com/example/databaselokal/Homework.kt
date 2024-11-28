@@ -3,6 +3,7 @@ package com.example.databaselokal
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
+
 @Parcelize
 data class Homework(
     var id: Int = 0,
