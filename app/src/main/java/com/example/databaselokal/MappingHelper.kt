@@ -11,7 +11,7 @@ object MappingHelper {
 
         homeworkCursor?.apply {
             while (moveToNext()) {
-                val id = getInt(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns.ID))
+                val id = getInt(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns._ID))
                 val title = getString(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns.TITLE))
                 val description = getString(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns.DESCRIPTION))
                 val date = getString(getColumnIndexOrThrow(DatabaseContract.HomeworkColumns.DATE))

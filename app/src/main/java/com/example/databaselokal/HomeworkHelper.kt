@@ -36,7 +36,7 @@ class HomeworkHelper(context: Context) {
         return database.query(
             DATABASE_TABLE,
             null, null, null, null, null,
-            "${DatabaseContract.HomeworkColumns.ID} ASC"
+            "${DatabaseContract.HomeworkColumns._ID} ASC"
         )
     }
 
@@ -45,10 +45,10 @@ class HomeworkHelper(context: Context) {
     }
 
     fun update(id: String, values: ContentValues?): Int {
-        return database.update(DATABASE_TABLE, values, "${DatabaseContract.HomeworkColumns.ID} = ?", arrayOf(id))
+        return database.update(DATABASE_TABLE, values, "${DatabaseContract.HomeworkColumns._ID} = ?", arrayOf(id))
     }
 
     fun deleteById(id: String): Int {
-        return database.delete(DATABASE_TABLE, "${DatabaseContract.HomeworkColumns.ID} = ?", arrayOf(id))
+        return database.delete(DATABASE_TABLE, "${DatabaseContract.HomeworkColumns._ID} = ?", arrayOf(id))
     }
 }

@@ -10,7 +10,7 @@ internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATA
         private const val DATABASE_VERSION = 1
         private const val SQL_CREATE_TABLE_NOTE = """
             CREATE TABLE ${DatabaseContract.HomeworkColumns.TABLE_NAME} (
-                ${DatabaseContract.HomeworkColumns.ID} INTEGER PRIMARY KEY AUTOINCREMENT,
+                ${DatabaseContract.HomeworkColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT,
                 ${DatabaseContract.HomeworkColumns.TITLE} TEXT NOT NULL,
                 ${DatabaseContract.HomeworkColumns.DESCRIPTION} TEXT NOT NULL,
                 ${DatabaseContract.HomeworkColumns.DATE} TEXT NOT NULL
